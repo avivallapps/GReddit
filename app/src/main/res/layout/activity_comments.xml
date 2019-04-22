@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rellayoutToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/mediumYellow">
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/commentsHeadingRellayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rellayoutToolBar"
+            android:background="@drawable/black_border">
+
+            <ImageView
+                android:id="@+id/postThumbnail"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btnPostReply"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/postThumbnail"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="reply"
+                android:textAlignment="center"
+                android:textSize="8sp"
+                android:background="@drawable/lightyellow_rounded_button"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/postThumbnail">
+
+                <TextView
+                    android:id="@+id/postTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="comment"
+                    android:textColor="@color/colorDarkGrey" />
+
+                <TextView
+                    android:id="@+id/postAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postTitle"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="Author"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/postUpdated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postAuthor"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="Last Updated"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+
+            <ProgressBar
+                android:id="@+id/postsLoaingbar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/commentsLoaingbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/commentsLoaingbar"
+            android:layout_alignLeft="@id/commentsLoaingbar"
+            android:layout_alignRight="@id/commentsLoaingbar"
+            android:layout_alignTop="@id/commentsLoaingbar"
+            android:text="Loading comments..."
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+        <ListView
+            android:id="@+id/commentsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/commentsHeadingRellayout">
+
+        </ListView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

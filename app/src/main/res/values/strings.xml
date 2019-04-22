@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GReddit</string>
+
+    <string name="post_url">post_url</string>
+    <string name="post_thumbnail">post_thumbnail</string>
+    <string name="post_title">post_title</string>
+    <string name="post_author">post_author</string>
+    <string name="date_updated">date_updated</string>
+    <string name="post_name">post_name</string>
+
+
+
+    <string name="lostpassword">No account yet? Please <a href="https://www.reddit.com/register/" target="_top">click here</a></string>
+
+
+
+
+    <string name="SessionUsername">dim.aviv.howe.account.SessionUsername</string>
+    <string name="SessionModhash">dim.aviv.howe.account.SessionModhash</string>
+    <string name="SessionCookie">dim.aviv.howe.account.SessionCookie</string>
+
+</resources>
